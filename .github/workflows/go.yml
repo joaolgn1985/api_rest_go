@@ -19,10 +19,10 @@ jobs:
         go-version: 1.18
       
     - name: Build-Db
-      run: docker-composer build
+      run: docker-compose build
       
     - name: Create-Db
-      run: docker-composer up -d
+      run: docker-compose up -d
 
     - name: Test
       run: go test -v main_test.go
